@@ -488,6 +488,72 @@ body{
     margin: 0px;
 }
 
+/* project btn */
+
+.projectBtnContainer{
+    width: 45%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.projectBtnContainer .codeBtn,
+.projectBtnContainer .cmsBtn{
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 8px 25px;
+    color: #020202;
+    box-shadow: 0 5px 15px rgba(240, 166, 202, 0.4);
+    border: 2px solid #ff77a9;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #f0a6ca, #ff77a9);
+    transition: all 0.3s ease;
+          
+}
+
+.cms.hide{
+    display: none;
+}
+
+.cms.active{
+    display: block;
+}
+
+.code.hide{
+    display: none;
+}
+
+.code.active{
+    display: block;
+}
+
+.projectBtnContainer .codeBtn.hide{
+    box-shadow: 0 5px 15px rgba(240, 166, 202, 0.4);
+}
+
+.projectBtnContainer .codeBtn:hover,
+.projectBtnContainer .codeBtn.active{
+    background: linear-gradient(45deg, #ff77a9, #f0a6ca);
+    border-color: #f06292;
+    box-shadow: 0 0 10px #ff77a9, 0 0 20px #f06292;
+    color: white;
+}
+
+.projectBtnContainer .cmsBtn.hide{
+    box-shadow: 0 5px 15px rgba(240, 166, 202, 0.4);
+}
+
+.projectBtnContainer .cmsBtn:hover,
+.projectBtnContainer .cmsBtn.active{
+    background: linear-gradient(45deg, #ff77a9, #f0a6ca);
+    border-color: #f06292;
+    box-shadow: 0 0 10px #ff77a9, 0 0 20px #f06292;
+    color: white;
+}
+
+
+/* project head */
+
 .project-head{
     font-size: 3rem;
 }
@@ -1036,6 +1102,13 @@ footer{
     }
 }
 
+@media (max-width: 855px) {
+    .projectBtnContainer{
+        width: 80%;
+        justify-content: space-around;
+    }
+}
+
 @media (max-width: 768px) {
     .home{
         flex-direction: column;
@@ -1184,6 +1257,16 @@ footer{
 
     .skill-container{
         width: 85%;
+    }
+
+    .projectBtnContainer{
+        width: 100%;
+    }
+
+    .projectBtnContainer .codeBtn,
+    .projectBtnContainer .cmsBtn{
+        font-size: 15px;
+        padding: 5px 25px;
     }
 }
 
@@ -1456,6 +1539,14 @@ footer{
 
     .newsletter-container h3 {
         font-size: 1.3rem;
+    }
+
+    .projectBtnContainer{
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1rem;
+        flex-direction: column;
     }
 }
 
